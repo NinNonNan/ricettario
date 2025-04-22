@@ -1,24 +1,24 @@
-/* Impostazioni generali del body */
+/* Layout base */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center; /* Centra il contenuto orizzontalmente */
-    align-items: center; /* Centra il contenuto verticalmente */
-    height: 100vh;
 }
 
-/* Contenitore principale */
-.container {
-    width: 100%;
-    max-width: 1200px; /* Limita la larghezza massima */
-    margin: 20px auto; /* Margine automatico per centrare */
+/* Header e Footer */
+header, footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+/* Contenitore centrale */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Box delle ricette */
@@ -38,23 +38,22 @@ body {
     margin-bottom: 20px;
 }
 
-/* Sezioni delle ricette */
+/* Sezioni della ricetta */
 .recipe-section {
     margin-top: 20px;
 }
 
-/* Lista degli ingredienti e delle istruzioni */
+/* Liste */
 .recipe-ingredients ul, .recipe-instructions ol {
     list-style-position: inside;
 }
 
-/* Ogni ingrediente e istruzione */
 .recipe-ingredients li, .recipe-instructions li {
     margin-bottom: 8px;
     font-size: 1rem;
 }
 
-/* Dettagli aggiuntivi come tempo, difficoltà, ecc. */
+/* Dettagli extra */
 .recipe-details {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -73,68 +72,7 @@ body {
     color: #333;
 }
 
-/* Footer */
-.recipe-footer {
-    text-align: center;
-    margin-top: 40px;
-    color: #777;
-}
-
-/* Media Query per schermi più piccoli */
-@media screen and (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
-
-    .recipe-header {
-        font-size: 1.8rem;
-    }
-
-    .recipe-ingredients li, .recipe-instructions li {
-        font-size: 0.9rem;
-    }
-
-    .recipe-box {
-        padding: 15px;
-    }
-
-    /* Dettagli aggiuntivi */
-    .recipe-details {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Media Query per dispositivi molto piccoli (come smartphone) */
-@media screen and (max-width: 480px) {
-    body {
-        padding: 10px; /* Aggiungi padding per evitare che il contenuto tocchi i bordi */
-    }
-
-    .container {
-        width: 100%;
-        padding: 10px;
-        margin: 10px 0; /* Aggiungi margine superiore e inferiore */
-    }
-
-    .recipe-header {
-        font-size: 1.6rem;
-    }
-
-    .recipe-ingredients li, .recipe-instructions li {
-        font-size: 0.85rem;
-    }
-
-    .recipe-footer {
-        font-size: 0.9rem;
-    }
-
-    /* Dettagli aggiuntivi */
-    .recipe-details {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Icone per le caratteristiche della ricetta */
+/* Icone */
 .icon {
     width: 20px;
     height: 20px;
@@ -147,27 +85,64 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
 }
-
 .icon-vegan {
     background-image: url('https://image-url-for-vegan-icon.png');
     background-size: contain;
     background-repeat: no-repeat;
 }
-
 .icon-omnivore {
     background-image: url('https://image-url-for-omnivore-icon.png');
     background-size: contain;
     background-repeat: no-repeat;
 }
-
 .icon-istamina-yes {
     background-image: url('https://image-url-for-istamina-yes-icon.png');
     background-size: contain;
     background-repeat: no-repeat;
 }
-
 .icon-istamina-no {
     background-image: url('https://image-url-for-istamina-no-icon.png');
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+/* Media Query */
+@media screen and (max-width: 768px) {
+    .recipe-header {
+        font-size: 1.8rem;
+    }
+
+    .recipe-ingredients li, .recipe-instructions li {
+        font-size: 0.95rem;
+    }
+
+    .recipe-box {
+        padding: 15px;
+    }
+
+    .recipe-details {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        padding: 10px;
+    }
+
+    .recipe-header {
+        font-size: 1.6rem;
+    }
+
+    .recipe-ingredients li, .recipe-instructions li {
+        font-size: 0.85rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+
+    .recipe-details {
+        grid-template-columns: 1fr;
+    }
 }
