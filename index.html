@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ricette Golose</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Ricette Golose</h1>
+    <p>Scopri ricette dolci e salate</p>
+</header>
+
+<nav>
+    <a href="#index">Indice</a>
+    <a href="#ricetta-dolci">Dolci</a>
+    <a href="#ricetta-salate">Salate</a>
+</nav>
+
+<div class="container">
+
+    <section id="index">
+        <h2>Indice delle Ricette</h2>
+        <ul id="index-list" class="index">
+            <!-- Le ricette vengono caricate dinamicamente qui -->
+        </ul>
+    </section>
+
+    <section id="ricetta-dolci">
+        <h2>Ricette Dolci</h2>
+        <div id="dolci-recipes">
+            <!-- Le ricette dolci vengono caricate dinamicamente qui -->
+        </div>
+    </section>
+
+    <section id="ricetta-salate">
+        <h2>Ricette Salate</h2>
+        <div id="salate-recipes">
+            <!-- Le ricette salate vengono caricate dinamicamente qui -->
+        </div>
+    </section>
+
+</div>
+
+<footer class="footer">
+    <p>&copy; 2025 Ricette Golose</p>
+</footer>
+
+<script>
+// Carica le ricette da un file JSON
+async function loadRecipes() {
+    try {
+        const response = await fetch('recipes.json');
+        const data = await response.json();
+
+        const indexList = document.getElementById('index-list');
+        const dolciRecipes = document.getElementById('dolci-recipes');
+        const salateRecipes = document.getElementById('salate-recipes');
+
+        // Popola l'indice
+        data.recipes.forEach(recipe => {
+            const li = document.createElement('li');
+            li.innerHTML = `<a href="#${recipe.id}">${recipe.name}</a>`;
+            indexList.appendChild(li);
+
+            // Popola le ricette dolci o salate
+            const recipeDiv = document.createElement('div');
+            recipeDiv.id = recipe.id;
+            recipeDiv.classList.add('recipe');
+            recipeDiv.innerHTML = `
+                <h2>${recipe.name}</h2>
+                <img src="${recipe.image}" alt="${recipe.name}">
+                <p><strong>Ingredienti:</strong> ${recipe.ingredients.join(', ')}</p>
+                <p><strong>Preparazione:</strong> ${recipe.instructions}</p>
+            `;
+
+            if (recipe.type === 'dolce') {
+                dolciRecipes.appendChild(recipeDiv);
+            } else {
+                salateRecipes.appendChild(recipeDiv);
+            }
+        });
+    } catch (error) {
+        console.error('Errore nel caricare le ricette:', error);
+    }
+}
+
+// Carica le ricette quando la pagina è pronta
+loadRecipes();
+</script>
+
+</body>
+</html>
