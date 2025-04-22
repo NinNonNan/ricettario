@@ -1,0 +1,36 @@
+{
+  "recipes": [
+    {
+      "id": "tiramisu",
+      "name": "Tiramisù",
+      "type": "dolce",
+      "image": "https://via.placeholder.com/800x400",
+      "ingredients": ["Savoiardi", "Mascarpone", "Caffè", "Cacao in polvere"],
+      "instructions": "Iniziare preparando il caffè e lasciandolo raffreddare. Immergere i savoiardi nel caffè e alternarli con il mascarpone preparato..."
+    },
+    {
+      "id": "cheesecake",
+      "name": "Cheesecake",
+      "type": "dolce",
+      "image": "https://via.placeholder.com/800x400",
+      "ingredients": ["Biscotti digestive", "Formaggio cremoso", "Zucchero", "Panna"],
+      "instructions": "Per la base, tritare i biscotti e mescolarli con il burro fuso. Per la crema, mescolare il formaggio con lo zucchero e la panna..."
+    },
+    {
+      "id": "pizza-margherita",
+      "name": "Pizza Margherita",
+      "type": "salato",
+      "image": "https://via.placeholder.com/800x400",
+      "ingredients": ["Farina", "Pomodoro", "Mozzarella", "Basilico"],
+      "instructions": "Preparare l'impasto della pizza e lasciarlo lievitare. Condire con pomodoro, mozzarella e basilico, quindi cuocere in forno..."
+    },
+    {
+      "id": "lasagna",
+      "name": "Lasagna",
+      "type": "salato",
+      "image": "https://via.placeholder.com/800x400",
+      "ingredients": ["Pasta per lasagna", "Carne macinata", "Besciamella", "Pomodoro"],
+      "instructions": "Preparare il ragù e la besciamella, quindi alternare strati di pasta, carne e besciamella. Cuocere in forno..."
+    }
+  ]
+}
