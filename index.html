@@ -53,7 +53,7 @@
 // Carica le ricette da un file JSON
 async function loadRecipes() {
     try {
-        const response = await fetch('recipes/recipes.json');
+        const response = await fetch('recipes.json');
         const data = await response.json();
 
         const indexList = document.getElementById('index-list');
@@ -73,10 +73,23 @@ async function loadRecipes() {
             recipeDiv.innerHTML = `
                 <h2>${recipe.name}</h2>
                 <img src="${recipe.image}" alt="${recipe.name}">
+                
+                <div class="recipe-details">
+                    <p><strong>Difficoltà:</strong> ${recipe.difficulty}</p>
+                    <p><strong>Costo:</strong> ${recipe.cost}</p>
+                    <p><strong>Tempo di preparazione:</strong> ${recipe.preparation_time}</p>
+                    <p><strong>Tempo di riposo:</strong> ${recipe.rest_time}</p>
+                    <p><strong>Tempo di cottura:</strong> ${recipe.cooking_time}</p>
+                    <p><strong>Porzioni:</strong> ${recipe.servings}</p>
+                    <p><strong>Metodo di cottura:</strong> ${recipe.cooking_method}</p>
+                    <p><strong>Cucina:</strong> ${recipe.cuisine}</p>
+                </div>
+
                 <h3>Ingredienti:</h3>
                 <ul>
                     ${recipe.ingredients.map(ingredient => `<li>${ingredient.quantity} ${ingredient.name}</li>`).join('')}
                 </ul>
+                
                 <h3>Preparazione:</h3>
                 <p>${recipe.instructions}</p>
             `;
