@@ -92,5 +92,37 @@
       ],
       "instructions": "Preparare il ragù e la besciamella, quindi alternare strati di pasta, carne e besciamella. Cuocere in forno..."
     }
+    {
+      "id": "piadina-senza-strutto",
+      "name": "Piadina senza strutto all’Olio di Oliva",
+      "type": "salato",
+      "image": "https://www.giallozafferano.it/images/ricette/14808_1.jpg",
+      "difficulty": "Molto facile",
+      "cost": "Molto economico",
+      "preparation_time": "15 Minuti",
+      "rest_time": "30 Minuti",
+      "cooking_time": "15 Minuti",
+      "servings": "6 Piadine",
+      "cooking_method": "Fornello",
+      "cuisine": "Italiana",
+      "diet": "Vegetariana",
+      "histamine": false,
+      "ingredients": [
+        {"name": "Farina 00", "quantity": "300g"},
+        {"name": "Acqua", "quantity": "150ml"},
+        {"name": "Olio extravergine d’oliva", "quantity": "30g"},
+        {"name": "Sale fino", "quantity": "5g"}
+      ],
+      "instructions": [
+        "Preparate l’impasto: impastare a mano, in ciotola o in planetaria. Unire la farina e l’acqua a filo, poco alla volta.",
+        "Iniziare a impastare, poi aggiungere a filo l'olio di oliva e infine il sale, sempre impastando. Continuare fino a formare un panetto morbido e non appiccicoso.",
+        "Dividere l’impasto in pezzetti quante piadine si vogliono fare. Consigliato un numero da 4 a 6 a seconda della dimensione della padella.",
+        "Formare delle palline con l’impasto e coprirle con pellicola. Lasciarle riposare per 30 minuti su un piano leggermente infarinato.",
+        "Stendere ciascun panetto formando un disco di spessore di massimo 3mm.",
+        "Riscaldare una padella antiaderente e, quando è ben calda, adagiare la piadina. Cuocere per qualche minuto a fiamma bassa fino a quando si formano delle bollicine in superficie.",
+        "Girare la piadina e cuocere l’altro lato fino a doratura.",
+        "Continuare così con tutte le piadine e impilarle una sull’altra. Farcirle da calde o riscaldarle dopo."
+      ]
+    }
   ]
 }
