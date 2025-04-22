@@ -14,7 +14,7 @@
       "cooking_method": "Fornello",
       "cuisine": "Italiana",
       "diet": "Onnivora",
-      "histamine": false,
+      "histamine": true,
       "ingredients": [
         {"name": "Savoiardi", "quantity": "300g"},
         {"name": "Mascarpone", "quantity": "500g"},
@@ -37,7 +37,7 @@
       "cooking_method": "Frigo",
       "cuisine": "Americana",
       "diet": "Vegetariana",
-      "histamine": false,
+      "histamine": true,
       "ingredients": [
         {"name": "Biscotti digestive", "quantity": "200g"},
         {"name": "Formaggio cremoso", "quantity": "400g"},
@@ -105,7 +105,7 @@
       "servings": "6 Piadine",
       "cooking_method": "Fornello",
       "cuisine": "Italiana",
-      "diet": "Vegetariana",
+      "diet": "Vegana",
       "histamine": false,
       "ingredients": [
         {"name": "Farina 00", "quantity": "300g"},
