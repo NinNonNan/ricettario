@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ricette Golose</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Aggiungi FontAwesome per le icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 
@@ -53,7 +55,7 @@
 // Carica le ricette da un file JSON
 async function loadRecipes() {
     try {
-        const response = await fetch('recipes/recipes.json');
+        const response = await fetch('recipes.json');
         const data = await response.json();
 
         const indexList = document.getElementById('index-list');
@@ -75,19 +77,21 @@ async function loadRecipes() {
                 <img src="${recipe.image}" alt="${recipe.name}">
                 
                 <div class="recipe-details">
-                    <p><strong>Difficoltà:</strong> ${recipe.difficulty}</p>
-                    <p><strong>Costo:</strong> ${recipe.cost}</p>
-                    <p><strong>Tempo di preparazione:</strong> ${recipe.preparation_time}</p>
-                    <p><strong>Tempo di riposo:</strong> ${recipe.rest_time}</p>
-                    <p><strong>Tempo di cottura:</strong> ${recipe.cooking_time}</p>
-                    <p><strong>Porzioni:</strong> ${recipe.servings}</p>
-                    <p><strong>Metodo di cottura:</strong> ${recipe.cooking_method}</p>
-                    <p><strong>Cucina:</strong> ${recipe.cuisine}</p>
+                    <div class="recipe-info">
+                        <i class="fas fa-tachometer-alt"></i> <strong>Difficoltà:</strong> ${recipe.difficulty}<br>
+                        <i class="fas fa-wallet"></i> <strong>Costo:</strong> ${recipe.cost}<br>
+                        <i class="fas fa-clock"></i> <strong>Tempo di preparazione:</strong> ${recipe.preparation_time}<br>
+                        <i class="fas fa-clock"></i> <strong>Tempo di riposo:</strong> ${recipe.rest_time}<br>
+                        <i class="fas fa-burn"></i> <strong>Tempo di cottura:</strong> ${recipe.cooking_time}<br>
+                        <i class="fas fa-users"></i> <strong>Porzioni:</strong> ${recipe.servings}<br>
+                        <i class="fas fa-fire-alt"></i> <strong>Metodo di cottura:</strong> ${recipe.cooking_method}<br>
+                        <i class="fas fa-pizza-slice"></i> <strong>Cucina:</strong> ${recipe.cuisine}
+                    </div>
                 </div>
 
                 <h3>Ingredienti:</h3>
-                <ul>
-                    ${recipe.ingredients.map(ingredient => `<li>${ingredient.quantity} ${ingredient.name}</li>`).join('')}
+                <ul class="ingredients">
+                    ${recipe.ingredients.map(ingredient => `<li><i class="fas fa-cogs"></i> ${ingredient.quantity} ${ingredient.name}</li>`).join('')}
                 </ul>
                 
                 <h3>Preparazione:</h3>
