@@ -53,7 +53,7 @@
 // Carica le ricette da un file JSON
 async function loadRecipes() {
     try {
-        const response = await fetch('recipes.json');
+        const response = await fetch('recipes/recipes.json');
         const data = await response.json();
 
         const indexList = document.getElementById('index-list');
