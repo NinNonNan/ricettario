@@ -13,6 +13,8 @@
       "servings": "6 porzioni",
       "cooking_method": "Fornello",
       "cuisine": "Italiana",
+      "diet": "Onnivora",
+      "histamine": false,
       "ingredients": [
         {"name": "Savoiardi", "quantity": "300g"},
         {"name": "Mascarpone", "quantity": "500g"},
@@ -34,6 +36,8 @@
       "servings": "8 porzioni",
       "cooking_method": "Frigo",
       "cuisine": "Americana",
+      "diet": "Vegetariana",
+      "histamine": false,
       "ingredients": [
         {"name": "Biscotti digestive", "quantity": "200g"},
         {"name": "Formaggio cremoso", "quantity": "400g"},
@@ -55,6 +59,8 @@
       "servings": "4 porzioni",
       "cooking_method": "Forno",
       "cuisine": "Italiana",
+      "diet": "Onnivora",
+      "histamine": true,
       "ingredients": [
         {"name": "Farina", "quantity": "500g"},
         {"name": "Pomodoro", "quantity": "300g"},
@@ -76,6 +82,8 @@
       "servings": "6 porzioni",
       "cooking_method": "Forno",
       "cuisine": "Italiana",
+      "diet": "Onnivora",
+      "histamine": true,
       "ingredients": [
         {"name": "Pasta per lasagna", "quantity": "250g"},
         {"name": "Carne macinata", "quantity": "500g"},
